@@ -87,6 +87,23 @@ const address = findAddress(obj);
 // Problem - 5 : ----------------------------------
 
 function canPay(changeArray, totalDue) {
+    if (changeArray.length === 0) {
+        return "Oh! There is no money, what can I do?";
+    }
+    
+    var totalChange = 0;
+    for (var i = 0; i < changeArray.length; i++) {
+        totalChange += changeArray[i];
+    }
 
-
+    if (totalChange >= totalDue) {
+        return true;
+    } else {
+        return false;
+    }
 }
+
+var changeArray = [1, 2, 5];
+var totalDue = 10;
+var canPayForChips = canPay(changeArray, totalDue);
+// console.log(canPayForChips);
