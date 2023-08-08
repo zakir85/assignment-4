@@ -1,5 +1,7 @@
 
-// Problem - 1(basic math)
+// Batch-8, Assignment-4, Date: 08/08/2023
+
+// Problem - 1: -----------------------------------
 
 function cubeNumber(number) {
     if(typeof number === 'number'){
@@ -18,7 +20,7 @@ let output = cubeNumber(inputStr);
 
 
 
-// Problem - 2
+// Problem - 2: ----------------------------------
 
 function matchFinder(string1, string2) {
     if(typeof string1 !== "string" || typeof string2 !== "string"){
@@ -35,7 +37,7 @@ function matchFinder(string1, string2) {
 // console.log(matchFinder("Hi, Nice to meet you", 123456));
 
 
-// Problem - 3
+// Problem - 3: ----------------------------------
 
 function sortMaker(arr) {
     if (arr.length !== 2) {
@@ -65,13 +67,26 @@ console.log(sortMaker([4, -2]));
 */
 
 
-// Problem - 4
+// Problem - 4 : ----------------------------------
 
 function findAddress(obj) {
+    let street = obj.street || "__";
+    let house = obj.house || "__";
+    let society = obj.society || "__";
+
+    return  street + ", " + house + ", " + society;
+
 }
+// const obj = { street: 10, house: "15A", society: "Earth Perfect" };
+const obj = { street: 10,  society: "Earth Perfect" };
+const address = findAddress(obj);
+// console.log(address);
 
 
-// Problem - 5
+
+// Problem - 5 : ----------------------------------
 
 function canPay(changeArray, totalDue) {
+
+
 }
