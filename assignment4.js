@@ -38,7 +38,32 @@ function matchFinder(string1, string2) {
 // Problem - 3
 
 function sortMaker(arr) {
+    if (arr.length !== 2) {
+        return "Invalid Input";
+    }
+
+    const [num1, num2] = arr;
+
+    if (num1 < 0 || num2 < 0) {
+        return "Invalid Input";
+    } 
+    
+    else if (num1 === num2) {
+        return "equal";
+    } 
+    
+    else {
+        const bigToSmallArr = [num1, num2].sort((a, b) => b - a);
+        return bigToSmallArr;
+    }
 }
+
+/*
+console.log(sortMaker([2, 3]));
+console.log(sortMaker([4, 4]));
+console.log(sortMaker([4, -2]));
+*/
+
 
 // Problem - 4
 
